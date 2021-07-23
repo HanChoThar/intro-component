@@ -1,0 +1,68 @@
+@import 'config';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+body{
+  font-size: $fontSize;
+  background-color: map-get($primary, 'red' );
+  @include fontStyle;
+}
+
+.login{
+  color: white;
+}
+
+.offer{
+  background-color: $accent;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.16);
+}
+
+.form{
+  background-color: white;
+  width: auto;
+  height: auto;
+  padding: 20px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.16);
+
+  &-input{
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1.5rem;
+    border: 1.5px solid black;
+    border-radius: 8px;
+
+    &:focus{
+      outline: none !important;
+      border: 2px solid blue;
+    }
+  }
+
+  &-btn{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid transparent;
+    color: white;
+    border-radius: 8px;
+    background-color: map-get($primary, "green" );
+
+    &:hover{
+      background-color: darken(map-get($primary, "green"), 15%);
+    }
+  }
+  
+  p{
+    color: gray;
+    font-size: 14px;
+
+    span a{
+      color: map-get($primary, 'green' );
+      text-decoration: none;
+    }
+  }
+}
